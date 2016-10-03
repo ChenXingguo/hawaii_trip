@@ -72,6 +72,19 @@ h1 {
   font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 
+.connection-line{
+    height: 2px;
+    border-top: 2px dashed #ddd;
+    text-align: center;
+    margin: 20px 20px 10px 20px;
+}
+.connection-line span{
+    position: relative;
+    top: -8px;
+    background: #fff;
+    padding: 0 20px;
+}
+
 /*
 
 //tabs-left specific style

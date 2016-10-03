@@ -278,4 +278,9 @@ box-sizing: border-box;
     background-color: white;
 }
 
+.img-container img {
+    max-height:100%;
+    max-width:100%;
+}
+
 
