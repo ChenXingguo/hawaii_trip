@@ -1,20 +1,80 @@
 /* custom inclusion of right, left and below tabs */
 
-.tabs-below > .nav-tabs,
-.tabs-right > .nav-tabs,
-.tabs-left > .nav-tabs {
-  border-bottom: 0;
+/*
+.tabs-top > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+*/
+
+.tabs-top > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+  color: #666666;  /* theme gray */
+  text-align: center;
 }
 
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
-  display: none;
+.tabs-top > .nav-tabs {
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
 }
 
-.tab-content > .active,
-.pill-content > .active {
-  display: block;
+.tabs-top > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
 }
+
+.tabs-top > .nav-tabs > li > a:hover,
+.tabs-top > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-top > .nav-tabs .active > a,
+.tabs-top > .nav-tabs .active > a:hover,
+.tabs-top > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+  color: white;
+  background-color: #6cb100;
+}
+
+.tabs-top > .nav-tabs .active > a > h2 {
+  color: white;
+}
+
+.tabs-top > .nav-tabs > li > a > h2 {
+  color: #6cb100;  /* theme green */
+}
+
+.tab-pages {
+  width: 100%;
+  height: 100%;
+}
+
+.tab-pane {
+  height: 100%;
+
+}
+
+iframe {
+  border: 0;
+  margin-top:20px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #6cb100;  /* theme green */
+  font-size: 36px;  
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+/*
+
+//tabs-left specific style
 
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
@@ -26,7 +86,7 @@
   min-width: 74px;
   margin-right: 0;
   margin-bottom: 3px;
-  color: #666666;  /* theme gray */
+  color: #666666; 
   text-align: center;
 }
 
@@ -62,31 +122,8 @@
 }
 
 .tabs-left > .nav-tabs > li > a > h2 {
-  color: #6cb100;  /* theme green */
+  color: #6cb100;
 }
-
-.tab-pages {
-  width: 100%;
-  height: 100%;
-}
-
-.tab-pane {
-  height: 100%;
-
-}
-
-iframe {
-  border: 0;
-  overflow: hidden;
-}
-
-h1 {
-  color: #6cb100;  /* theme green */
-  font-size: 36px;  
-  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
-}
-
-/*
 
 //tabs-below specific style
 .tabs-below > .nav-tabs {
