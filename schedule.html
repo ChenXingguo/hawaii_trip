@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day1">
     <h3>2016-11-12&nbsp;&nbsp;星期六</h3>
     <div class="timeline-activity">
 
@@ -94,37 +94,21 @@
         </table>
         <table style="width:100%;border-spacing:0 5px">
             <tr>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">SHANGHAI</div>
-                </th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">SHANGHAI</div></th>
                 <th style="width:80%;text-align:center" rowspan="4">飞行9小时50分钟</th>
-                <th class="_Ucf" colspan="3" scope="colgroup" style="white-space: nowrap;">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">HONOLULU</div>
-                </th>
+                <th class="_Ucf" colspan="3" scope="colgroup" style="white-space: nowrap;"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">HONOLULU</div></th>
             </tr>
             <tr>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">上海</div>
-                </th>
-                <th class="_Ucf" colspan="3" scope="colgroup" style="white-space: nowrap;">
-                    <div class="vk_sh vk_txt">檀香山</div>
-                </th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">上海</div></th>
+                <th class="_Ucf" colspan="3" scope="colgroup" style="white-space: nowrap;"><div class="vk_sh vk_txt">檀香山</div></th>
             </tr>
             <tr>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">下午4:20</div>
-                </th>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">上午8:10</div>
-                </th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">下午4:20</div></th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">上午8:10</div></th>
             </tr>
             <tr>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">航站楼1</div>
-                </th>
-                <th class="_Ucf" colspan="3" scope="colgroup">
-                    <div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">航站楼?</div>
-                </th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">航站楼1</div></th>
+                <th class="_Ucf" colspan="3" scope="colgroup"><div class="vk_sh vk_txt" style="padding:0 0 3px 0;width:100%">航站楼?</div></th>
             </tr>
         </table>
 
@@ -140,37 +124,37 @@
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day2">
     <h3>2016-11-13&nbsp;&nbsp;星期日</h3>
     <div class="timeline-activity">
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day3">
     <h3>2016-11-14&nbsp;&nbsp;星期一</h3>
     <div class="timeline-activity">
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day4">
     <h3>2016-11-15&nbsp;&nbsp;星期二</h3>
     <div class="timeline-activity">
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day5">
     <h3>2016-11-16&nbsp;&nbsp;星期三</h3>
     <div class="timeline-activity">
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day6">
     <h3>2016-11-17&nbsp;&nbsp;星期四</h3>
     <div class="timeline-activity">
     </div>
 </div>
 
-<div data-role="collapsible">
+<div data-role="collapsible" id="day7">
     <h3>2016-11-18&nbsp;&nbsp;星期五</h3>
     <div class="timeline-activity">
         <table class="ts" aria-hidden="true" style="width:100%;margin:20px 0 17px 0">
@@ -227,5 +211,20 @@
     </div>
 </div>
 
+<script>
+(function expandToday() {
+    var today = new Date();
+    var startDate = new Date("2016-11-12");
+    var timeDiff = today - startDate;
+    var daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+    if (daysDiff < 0 || daysDiff > 6) {
+        daysDiff = 0;
+    }
+    var id = daysDiff + 1;
+    var domObj = document.getElementById("day" + id);
+    domObj.setAttribute("data-collapsed", "false");
+    domObj.scrollIntoView();
+})();
+</script>
 </body>
 </html>
